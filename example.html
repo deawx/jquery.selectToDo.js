@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="jquery.selectToDo.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$().selectToDo({
+			"checkBoxName"         : "check",
+			"selectAllButtonId"    : "selectAll",
+			"selectNoneButtonId"   : "selectNone",
+			"selectInvertButtonId" : "selectInv",
+			"actionButtonId"       : "actionButton",
+			"onAction":function(result){
+				alert("selected : "+result);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Example</h1>
+		<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th width="20">&nbsp;</th>
+						<th>record</th>
+					</tr>
+				</thead>
+				<tbody>
+			        <tr>
+			          	<td><input type="checkbox" value="1" name="check"></td>
+						<td>title1</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="2" name="check"></td>
+						<td>title2</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="3" name="check"></td>
+						<td>title3</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="4" name="check"></td>
+						<td>title4</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="5" name="check"></td>
+						<td>title5</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="6" name="check"></td>
+						<td>title6</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="7" name="check"></td>
+						<td>title7</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="8" name="check"></td>
+						<td>title8</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="9" name="check"></td>
+						<td>title9</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="10" name="check"></td>
+						<td>title10</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="11" name="check"></td>
+						<td>title11</td>
+					</tr>
+			        <tr>
+			          	<td><input type="checkbox" value="12" name="check"></td>
+						<td>title12</td>
+					</tr>
+			    </tbody>
+			       	<tfoot>
+			       		<tr>
+			       			<td colspan="5">
+				       			<input type="button" value="Select All" id="selectAll" class="btn">
+								<input type="button" value="Select None" id="selectNone" class="btn">
+								<input type="button" value="Select Invert" id="selectInv" class="btn">
+								<input type="button" value="Do something" id="actionButton" class="btn">
+							</td>
+			       		</tr>
+			       	</tfoot>
+			</table>
+	</div>
+</body>
+</html>

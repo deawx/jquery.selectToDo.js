@@ -1,3 +1,17 @@
+/*
+ * selectToDo - jQuery plugin for select checkbox
+ *
+ * Copyright (c) 2014 Elric Huang
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Project home:
+ *   https://github.com/elrichuang/jquery.selectToDo.js
+ *
+ * Version:  0.1.3
+ *
+ */
 ;(function ($){
 	$.fn.selectToDo = function (options){
 		var settings = $.extend({},{
@@ -8,13 +22,25 @@
 		
 		var element = this;
 		
-		$(settings.selectAllButton).bind("click",function(){//全选
+		$(settings.selectAllButton).bind("click",function(){
+			element.selectAll();
+		});
+		$(settings.selectNoneButton).bind("click",function(){
+			element.selectNone();
+		});
+		$(settings.selectInvertButton).bind("click",function(){
+			element.selectInvert();
+		});
+		
+		this.selectAll = function(){//全选
 			element.prop('checked', true);
-		});
-		$(settings.selectNoneButton).bind("click",function(){//全不选
+		};
+		
+		this.selectNone = function(){//全不选
 			element.prop('checked', false);
-		});
-		$(settings.selectInvertButton).bind("click",function(){//反选
+		};
+		
+		this.selectInvert = function(){//反选
 			element.each(function(){
 				if(this.checked){
 					$(this).prop('checked', false);
@@ -22,7 +48,7 @@
 					$(this).prop('checked', true);
 				}
 			});
-		});
+		};
 		
 		this.result = function(){
 			var checkVal=[];

@@ -36,7 +36,10 @@ $(function(){
 
 ```js
 var selectToDo = $("input[name='check']").selectToDo();
-selectToDo.result();    //返回选中的值组成的字符串，例如：1,2,3,4,5
+selectToDo.result();         //返回选中的值组成的字符串，例如：1,2,3,4,5
+selectToDo.selectAll();      //全选
+selectToDo.selectNone();     //取消选择
+selectToDo.selectInvert();   //反选
 ```
 
 ## License

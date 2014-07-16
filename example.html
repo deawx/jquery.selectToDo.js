@@ -10,15 +10,13 @@
 <script src="jquery.selectToDo.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	$(function(){
-		$().selectToDo({
-			"checkBoxName"         : "check",
-			"selectAllButtonId"    : "selectAll",
-			"selectNoneButtonId"   : "selectNone",
-			"selectInvertButtonId" : "selectInv",
-			"actionButtonId"       : "actionButton",
-			"onAction":function(result){
-				alert("selected : "+result);
-			}
+		var selectToDo = $("input[name='check']").selectToDo({
+			"selectAllButton"    : $("#selectAll"),
+			"selectNoneButton"   : $("#selectNone"),
+			"selectInvertButton" : $("#selectInv"),
+		});
+		$("#actionButton").bind("click",function(){
+			alert(selectToDo.result());
 		});
 	});
 </script>

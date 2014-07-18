@@ -8,14 +8,22 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="jquery.selectToDo.js" type="text/javascript" charset="utf-8"></script>
 ```
+```html
+<input type="checkbox" value="1" name="check">
+<input type="checkbox" value="2" name="check">
+<input type="checkbox" value="3" name="check">
+<input type="checkbox" value="4" name="check">
+<input type="checkbox" value="5" name="check">
+
+<input type="button" value="Select All" id="selectAll">
+<input type="button" value="Select None" id="selectNone">
+<input type="button" value="Select Invert" id="selectInv">
+<input type="button" value="Do something" id="actionButton">
+```
 
 ```js
 $(function(){
-	var selectToDo = $("input[name='check']").selectToDo({
-		"selectAllButton"    : $("#selectAll"),
-		"selectNoneButton"   : $("#selectNone"),
-		"selectInvertButton" : $("#selectInv")
-	});
+	var selectToDo = $("input[name='check']").selectToDo();
 	$("#actionButton").bind("click",function(){
 		alert(selectToDo.result());
 	});

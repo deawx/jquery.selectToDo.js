@@ -33,11 +33,11 @@ $(function(){
 ### 参数
 
 ```js
-{
+$("input[name='check']").selectToDo({
 	"selectAllButton"    : $("#selectAll"),    //全选按钮
 	"selectNoneButton"   : $("#selectNone"),   //取消选择按钮
 	"selectInvertButton" : $("#selectInv")     //反选按钮
-}
+});
 ```
 
 ### 方法

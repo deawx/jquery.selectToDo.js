@@ -2,6 +2,8 @@
 
 实现多个Checkbox全选，反选，取消选择功能的JQuery插件
 
+[演示地址](http://elrichuang.github.io/jquery.selectToDo.js/example.html)
+
 ## 使用说明
 
 ```html
